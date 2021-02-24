@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const Container = styled.div`
   width: 1140px;
-  padding: 10px;
+  padding: 0px 20px;
   @media (max-width: 1400px) {
     width: 900px;
   }

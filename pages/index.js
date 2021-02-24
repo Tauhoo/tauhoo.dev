@@ -3,6 +3,7 @@ import Container from "../components/Container"
 import Banner from "../components/Banner"
 import TopicPart from "../components/TopicPart"
 import Profile from "../components/Profile"
+import Blogs from "../components/Blogs"
 
 export default function Home({ darkMode = false }) {
   return (
@@ -12,13 +13,7 @@ export default function Home({ darkMode = false }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Banner></Banner>
-      <Container>
-        <TopicPart
-          darkMode={darkMode}
-          topic="Blogs"
-          text="They are article about what I am interested."
-        ></TopicPart>
-      </Container>
+      <Blogs></Blogs>
       <Profile darkMode={darkMode} />
       <Container>
         <TopicPart
