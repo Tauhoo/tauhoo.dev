@@ -1,4 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway");
+@import url("https://fonts.googleapis.com/css2?family=Promt");
+@import url("https://fonts.googleapis.com/css2?family=Sarabun");
+
 body {
   margin: 0px;
   padding: 0px;
+  font-size: 18px;
+  font-family: "Sarabun";
 }

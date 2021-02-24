@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 const Container = styled.div`
-  background-color: red;
   width: 1140px;
   @media (max-width: 1400px) {
     width: 900px;
