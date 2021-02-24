@@ -4,6 +4,11 @@ export const fontFamily = {
 }
 
 export const lineHeight = {
-  topic: "40px",
-  text: "20px",
+  topic: ["60px", "62px", "96px"],
+  text: "30px",
+}
+
+export const fontSize = {
+  topic: ["36px", "48px", "72px"],
+  text: "18px",
 }

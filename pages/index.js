@@ -1,6 +1,7 @@
 import Head from "next/head"
 import Container from "../components/Container"
 import Text from "../components/Text"
+import Topic from "../components/Topic"
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Text bold highlight>
           ice is the best ไอซ์
         </Text>
+        <Topic level={0}>Wellcome</Topic>
       </Container>
     </div>
   )
