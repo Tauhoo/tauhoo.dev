@@ -12,3 +12,9 @@ body {
 * {
   box-sizing: border-box;
 }
+
+@media (max-width: 840px) {
+  body {
+    font-size: 14px;
+  }
+}

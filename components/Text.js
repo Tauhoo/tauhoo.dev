@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import colors from "../config/colors"
-import { lineHeight } from "../config/font"
+import { lineHeight, lineHeightSmall } from "../config/font"
 
 const Container = styled.div`
   width: 100%;
@@ -11,6 +11,10 @@ const Container = styled.div`
   white-space: pre-wrap;
   word-break: break-word;
   line-height: ${lineHeight.text};
+
+  @media (max-width: 840px) {
+    line-height: ${lineHeightSmall.text};
+  }
 `
 
 export default ({

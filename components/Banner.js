@@ -21,21 +21,21 @@ const Container = styled.div`
     div:nth-child(2) {
       display: none;
     }
-    height: 300px;
+    height: 250px;
   }
 `
 
 function Banner({ darkMode = false, style }) {
   return (
     <Container style={style}>
-      <Topic style={{ textAlign: "center" }} level={1}>
+      <Topic style={{ textAlign: "center" }} level={1} darkMode={darkMode}>
         Wellcom !!
       </Topic>
-      <Topic style={{ textAlign: "center" }} level={2}>
+      <Topic style={{ textAlign: "center" }} level={2} darkMode={darkMode}>
         Wellcom !!
       </Topic>
       <br></br>
-      <Text style={{ textAlign: "center" }}>
+      <Text style={{ textAlign: "center" }} darkMode={darkMode}>
         I’m wachirawit wacharak. This is my web blogs. Let’s enjoy it.
       </Text>
     </Container>

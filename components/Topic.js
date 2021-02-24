@@ -1,7 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 import colors from "../config/colors"
-import { fontFamily, lineHeight, fontSize } from "../config/font"
+import {
+  fontFamily,
+  lineHeight,
+  fontSize,
+  fontSizeSmall,
+  lineHeightSmall,
+} from "../config/font"
 
 const Container = styled.div`
   width: 100%;
@@ -12,6 +18,11 @@ const Container = styled.div`
   line-height: ${({ level }) => lineHeight.topic[level]};
   font-family: ${fontFamily.topic};
   font-size: ${({ level }) => fontSize.topic[level]};
+
+  @media (max-width: 840px) {
+    line-height: ${({ level }) => lineHeightSmall.topic[level]};
+    font-size: ${({ level }) => fontSizeSmall.topic[level]};
+  }
 `
 
 export default ({

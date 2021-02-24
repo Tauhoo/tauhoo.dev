@@ -1,10 +1,10 @@
 import Head from "next/head"
 import Container from "../components/Container"
-import Text from "../components/Text"
-import Topic from "../components/Topic"
 import Banner from "../components/Banner"
+import TopicPart from "../components/TopicPart"
+import Profile from "../components/Profile"
 
-export default function Home() {
+export default function Home({ darkMode = false }) {
   return (
     <div>
       <Head>
@@ -13,11 +13,19 @@ export default function Home() {
       </Head>
       <Banner></Banner>
       <Container>
-        <Text>ice is the best ไอซ์</Text>
-        <Text bold highlight>
-          ice is the best ไอซ์
-        </Text>
-        <Topic level={0}>Wellcome</Topic>
+        <TopicPart
+          darkMode={darkMode}
+          topic="Blogs"
+          text="They are article about what I am interested."
+        ></TopicPart>
+      </Container>
+      <Profile darkMode={darkMode} />
+      <Container>
+        <TopicPart
+          darkMode={darkMode}
+          topic="Experience"
+          text="I’ll tell you what I have done in my life."
+        ></TopicPart>
       </Container>
     </div>
   )

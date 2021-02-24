@@ -7,6 +7,9 @@ const Container = styled.div`
   width: 100%;
   height: 100px;
   position: relative;
+  @media (max-width: 840px) {
+    height: 70px;
+  }
 `
 
 const MenuContainer = styled.div`

@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 const Container = styled.div`
   width: 1140px;
+  padding: 10px;
   @media (max-width: 1400px) {
     width: 900px;
   }
@@ -18,8 +19,8 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
 `
-export default ({ children }) => (
-  <Wrapper>
+export default ({ children, style }) => (
+  <Wrapper style={style}>
     <Container>{children}</Container>
   </Wrapper>
 )
