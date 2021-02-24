@@ -6,7 +6,7 @@ import { lineHeight } from "../config/font"
 const Container = styled.div`
   width: 100%;
   color: ${({ darkMode, highlight }) =>
-    darkMode ? colors : highlight ? colors.lightBlack : colors.gray};
+    darkMode ? colors.white : highlight ? colors.lightBlack : colors.gray};
   font-weight: ${({ bold }) => (bold ? "bold" : "lighter")};
   white-space: pre-wrap;
   word-break: break-word;

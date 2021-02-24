@@ -8,3 +8,7 @@ body {
   font-size: 18px;
   font-family: "Sarabun";
 }
+
+* {
+  box-sizing: border-box;
+}
