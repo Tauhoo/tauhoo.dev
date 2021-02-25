@@ -1,4 +1,5 @@
 import React from "react"
+import Link from "next/link"
 import styled from "styled-components"
 import Background from "./Background"
 import Text from "../Text"
@@ -24,7 +25,14 @@ const ContentContainer = styled.div`
   align-items: center;
 `
 
-const LinkContainer = styled.div``
+const LinkContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(7, max-content);
+  gap: 10px;
+  * {
+    text-decoration: none;
+  }
+`
 
 export default function Footer({ darkMode = false }) {
   return (
@@ -40,9 +48,25 @@ export default function Footer({ darkMode = false }) {
       ></Background>
       <ContentContainer>
         <LinkContainer>
-          <Text darkMode={true}>
-            facebook | github | tauhoo_ice@hotmail.com
-          </Text>
+          <Link href="https://www.facebook.com/tauhoo.ice">
+            <a>
+              <Text darkMode={true}>facebook</Text>
+            </a>
+          </Link>
+          <Text darkMode={true}>|</Text>
+          <Link href="https://github.com/Tauhoo">
+            <a>
+              <Text darkMode={true}>github</Text>
+            </a>
+          </Link>
+          <Text darkMode={true}>|</Text>
+          <Link href="mailto:tauhoo_ice@hotmail.com">
+            <a>
+              <Text darkMode={true}>tauhoo_ice@hotmail.com</Text>
+            </a>
+          </Link>
+          <Text darkMode={true}>|</Text>
+          <Text darkMode={true}>© {new Date().getFullYear()}</Text>
         </LinkContainer>
       </ContentContainer>
     </Container>
