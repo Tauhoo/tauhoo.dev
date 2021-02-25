@@ -12,9 +12,9 @@ export default function Home({ darkMode = false }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Banner></Banner>
-      <Blogs darkMode={darkMode}></Blogs>
+      <Blogs darkMode={darkMode} />
       <Profile darkMode={darkMode} />
-      <Experience darkMode={darkMode}></Experience>
+      <Experience darkMode={darkMode} />
     </div>
   )
 }

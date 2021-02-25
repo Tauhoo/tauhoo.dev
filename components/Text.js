@@ -17,13 +17,13 @@ const Container = styled.div`
   }
 `
 
-export default ({
+export default function Text({
   children,
   bold = false,
   darkMode = false,
   highlight = false,
   style,
-}) => {
+}) {
   return (
     <Container {...{ bold, darkMode, highlight }} style={style}>
       {children}

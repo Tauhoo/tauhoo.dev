@@ -25,13 +25,13 @@ const Container = styled.div`
   }
 `
 
-export default ({
+export default function Topic({
   children,
   bold = false,
   darkMode = false,
   level = 0,
   style,
-}) => {
+}) {
   return (
     <Container {...{ bold, darkMode, level }} style={style}>
       {children}

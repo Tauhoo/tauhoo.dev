@@ -6,7 +6,9 @@ import Text from "../Text"
 const Container = styled.div`
   width: 100%;
   height: 100px;
-  position: relative;
+  position: fixed;
+  top: 0px;
+  left: 0px;
   @media (max-width: 840px) {
     height: 70px;
   }
@@ -43,8 +45,7 @@ const MenuLayout = styled.div`
   }
 `
 
-export default ({ darkMode = false }) => {
-  console.log(darkMode)
+export default function Navbar({ darkMode = false }) {
   return (
     <Container>
       <Background
