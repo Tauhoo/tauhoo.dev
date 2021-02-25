@@ -8,7 +8,7 @@ const ContentContainer = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 40px 0px;
+  padding-top: 40px;
   gap: 40px;
   @media (max-width: 840px) {
     grid-template-columns: 1fr 1fr;
@@ -45,7 +45,7 @@ const postData = [
 
 export default function Blogs({ darkMode = false }) {
   return (
-    <Container>
+    <Container style={{ padding: "40px 0px" }}>
       <TopicPart
         darkMode={darkMode}
         topic="Blogs"

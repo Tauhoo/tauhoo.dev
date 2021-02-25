@@ -10,7 +10,7 @@ const Container = styled.div`
   gap: 20px;
   justify-items: center;
   align-items: center;
-  @media (max-width: 840px) {
+  @media (max-width: 650px) {
     > div:nth-child(2) {
       display: none;
     }
