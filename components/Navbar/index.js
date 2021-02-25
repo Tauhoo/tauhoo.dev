@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Background from "./Background"
 import Text from "../Text"
 import colors from "../../config/colors"
+import Logo from "../Logo"
 
 const Container = styled.div`
   width: 100%;
@@ -69,6 +70,7 @@ const MenuLayout = styled.div`
 const MenuLayoutSmall = styled.div`
   display: grid;
   grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
   width: 100%;
   height: 100%;
   justify-items: center;
@@ -109,16 +111,15 @@ export default function Navbar({ darkMode = false }) {
             zIndex: "1200",
             display: "flex",
             alignItems: "center",
+            justifyContent: "center",
           }}
           onClick={() => setVisibleMenu(old => !old)}
         >
-          <Text darkMode={true} style={{ textAlign: "center" }}>
-            Tauhoo
-          </Text>
+          <Logo></Logo>
         </div>
         <MenuLayoutSmall>
           <div onClick={() => setVisibleMenu(old => !old)}>
-            <Text darkMode={true}>Tauhoo</Text>
+            <Logo></Logo>
           </div>
           <Link href="/#blogs">
             <a onClick={() => setVisibleMenu(false)}>
@@ -177,7 +178,7 @@ export default function Navbar({ darkMode = false }) {
             </Link>
             <Link href="/#top">
               <a>
-                <Text darkMode={true}>Tauhoo</Text>
+                <Logo></Logo>
               </a>
             </Link>
             <Link href="/#experience">
