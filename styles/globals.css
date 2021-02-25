@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway");
-@import url("https://fonts.googleapis.com/css2?family=Promt");
+@import url("https://fonts.googleapis.com/css2?family=Prompt");
 @import url("https://fonts.googleapis.com/css2?family=Sarabun");
 
 body {
@@ -17,4 +17,8 @@ body {
   body {
     font-size: 14px;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
