@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 import TopicPart from "./TopicPart"
-import Topic from "./Topic"
 import Container from "./Container"
 import Text from "./Text"
 import colors from "../config/colors"
+import { profile } from "../content/index"
 
 const ContentContainer = styled.div`
   display: grid;
@@ -36,27 +36,6 @@ const ContainerBackground = styled.div`
   }
 `
 
-const profile = [
-  {
-    title: "How to create React project in 3 min easily",
-    detail:
-      "This article is about React framework explane how good it is. This article is about React framework explane how good it is.",
-    key: "0",
-  },
-  {
-    title: "How to create React project in 3 min easily",
-    detail:
-      "This article is about React framework explane how good it is. This article is about React framework explane how good it is.",
-    key: "1",
-  },
-  {
-    title: "How to create React project in 3 min easily",
-    detail:
-      "This article is about React framework explane how good it is. This article is about React framework explane how good it is.",
-    key: "2",
-  },
-]
-
 export default function Profile({ darkMode }) {
   return (
     <Container
@@ -65,11 +44,11 @@ export default function Profile({ darkMode }) {
       <ContainerBackground>
         <TopicPart
           darkMode={darkMode}
-          topic="Profile"
-          text="Let’s me introduce myself."
+          topic={profile.topic}
+          text={profile.text}
         ></TopicPart>
         <ContentContainer>
-          {profile.map(({ title, detail, key }) => (
+          {profile.posts.map(({ title, detail, key }) => (
             <Wrapper key={key}>
               <Text highlight bold darkMode={darkMode}>
                 {title}
