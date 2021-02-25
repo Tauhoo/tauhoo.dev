@@ -22,11 +22,16 @@ const ContainerImage = styled.div`
   height: 100px;
 `
 
-export default function ExperienceCard({ darkMode = false, title, detail }) {
+export default function ExperienceCard({
+  darkMode = false,
+  title,
+  detail,
+  src,
+}) {
   return (
     <Container>
       <ContainerImage>
-        <Image></Image>
+        <Image src={src}></Image>
       </ContainerImage>
       <ContainerContent>
         <Text highlight darkMode={darkMode} bold>

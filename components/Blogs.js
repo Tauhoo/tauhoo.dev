@@ -24,6 +24,8 @@ const postData = [
     title: "How to create React project in 3 min easily",
     detail:
       "This article is about React framework explane how good it is. This article is about React framework explane how good it is.",
+    src:
+      "https://www.codegrepper.com/codeimages/scroll-to-id-reactjs.png?ice=0",
     tag: ["React", "Web technology"],
     key: "0",
   },
@@ -31,6 +33,8 @@ const postData = [
     title: "How to create React project in 3 min easily",
     detail:
       "This article is about React framework explane how good it is. This article is about React framework explane how good it is.",
+    src:
+      "https://www.codegrepper.com/codeimages/scroll-to-id-reactjs.png?ice=0",
     tag: ["React", "Web technology"],
     key: "1",
   },
@@ -38,6 +42,8 @@ const postData = [
     title: "How to create React project in 3 min easily",
     detail:
       "This article is about React framework explane how good it is. This article is about React framework explane how good it is.",
+    src:
+      "https://www.codegrepper.com/codeimages/scroll-to-id-reactjs.png?ice=0",
     tag: ["React", "Web technology"],
     key: "2",
   },

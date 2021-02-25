@@ -32,16 +32,19 @@ export default function Experience({ darkMode }) {
         <ExperienceContainer>
           <ExperienceCard
             darkMode={darkMode}
+            src="https://www.codegrepper.com/codeimages/scroll-to-id-reactjs.png?ice=0"
             title="I’ll tell you what I have done in my life."
             detail="I’ll tell you what I have done in my life.I’ll tell you what I have done in my life.I’ll tell you what I have done in my life.I’ll tell you what I have done in my life.I’ll tell you what I have done in my life."
           ></ExperienceCard>
           <ExperienceCard
             darkMode={darkMode}
+            src="https://www.codegrepper.com/codeimages/scroll-to-id-reactjs.png?ice=0"
             title="I’ll tell you what I have done in my life."
             detail="I’ll tell you what I have done in my life.I’ll tell you what I have done in my life.I’ll tell you what I have done in my life.I’ll tell you what I have done in my life.I’ll tell you what I have done in my life."
           ></ExperienceCard>
           <ExperienceCard
             darkMode={darkMode}
+            src="https://www.codegrepper.com/codeimages/scroll-to-id-reactjs.png?ice=0"
             title="I’ll tell you what I have done in my life."
             detail="I’ll tell you what I have done in my life.I’ll tell you what I have done in my life.I’ll tell you what I have done in my life.I’ll tell you what I have done in my life.I’ll tell you what I have done in my life."
           ></ExperienceCard>

@@ -24,11 +24,17 @@ const ImageContainer = styled.div`
   }
 `
 
-export default function PostCard({ darkMode = false, title, detail, tag }) {
+export default function PostCard({
+  darkMode = false,
+  title,
+  detail,
+  tag,
+  src,
+}) {
   return (
     <ContentContainer>
       <ImageContainer>
-        <Image></Image>
+        <Image src={src}></Image>
       </ImageContainer>
       <PostContent
         title={title}
