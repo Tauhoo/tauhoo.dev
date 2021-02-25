@@ -21,6 +21,7 @@ const Wrapper = styled.div`
   display: grid;
   gap: 10px;
   grid-template-columns: 1fr;
+  grid-template-rows: max-content 1fr;
 `
 
 const ContainerBackground = styled.div`
