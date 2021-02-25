@@ -6,6 +6,7 @@ const Container = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: max-content 1fr max-content;
   gap: 20px;
   @media (max-width: 840px) {
     gap: 10px;

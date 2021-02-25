@@ -3,13 +3,14 @@ import styled from "styled-components"
 import PostContent from "./PostContent"
 import Image from "./Image"
 
-const ContentContainer = styled.div`
+const ContentContainer = styled.a`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: max-content 1fr;
   gap: 50px;
   justify-items: center;
-  align-items: center;
+  text-decoration: none;
   @media (max-width: 840px) {
     gap: 30px;
   }
@@ -30,9 +31,14 @@ export default function PostCard({
   detail,
   tag,
   src,
+  link,
 }) {
   return (
-    <ContentContainer>
+    <ContentContainer
+      onClick={() => console.log(link)}
+      href={link}
+      target="_blank"
+    >
       <ImageContainer>
         <Image src={src}></Image>
       </ImageContainer>
