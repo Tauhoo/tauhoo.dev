@@ -75,6 +75,9 @@ const MenuLayoutSmall = styled.div`
   height: 100%;
   justify-items: center;
   align-items: center;
+  * {
+    text-decoration: none;
+  }
 `
 
 export default function Navbar({ darkMode = false }) {
