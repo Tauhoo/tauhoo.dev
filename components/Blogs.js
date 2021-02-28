@@ -11,11 +11,11 @@ const ContentContainer = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   padding-top: 40px;
   gap: 40px;
-  @media (max-width: 840px) {
+  @media (max-width: 1140px) {
     grid-template-columns: 1fr 1fr;
   }
 
-  @media (max-width: 560px) {
+  @media (max-width: 840px) {
     grid-template-columns: 1fr;
   }
 `

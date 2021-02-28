@@ -49,7 +49,7 @@ const data = [
     link: "mailto:tauhoo_ice@hotmail.com",
     key: "2",
   },
-  { text: `© ${new Date().getFullYear()}`, link: "/" },
+  { text: `© ${new Date().getFullYear()}`, link: "/", key: "3" },
 ]
 
 export default function Footer({ darkMode = false }) {
@@ -75,7 +75,7 @@ export default function Footer({ darkMode = false }) {
                   </a>
                 </Link>
                 {index !== data.length - 1 ? (
-                  <TextPipeContainer>
+                  <TextPipeContainer key={key + "_pipe"}>
                     <Text darkMode={true}>|</Text>
                   </TextPipeContainer>
                 ) : null}

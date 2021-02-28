@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import PostContent from "./PostContent"
 import Image from "./Image"
+import colors from "../config/colors"
 
 const ContentContainer = styled.a`
   width: 100%;
@@ -11,8 +12,15 @@ const ContentContainer = styled.a`
   gap: 50px;
   justify-items: center;
   text-decoration: none;
+  padding: 30px 20px;
+  border-radius: 10px;
+  transition: 0.3s;
   @media (max-width: 840px) {
     gap: 30px;
+  }
+
+  &:hover {
+    background-color: ${colors.lightGray};
   }
 `
 
