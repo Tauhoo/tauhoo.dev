@@ -19,8 +19,10 @@ const ContentContainer = styled.a`
     gap: 30px;
   }
 
-  &:hover {
-    background-color: ${colors.lightGray};
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: ${colors.lightGray};
+    }
   }
 `
 

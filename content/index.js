@@ -154,7 +154,7 @@ export const experience = {
         {
           title: "Senior project",
           detail:
-            "I create specific arcitecture hardware for nueral network algoritm so that is why I also have some an experience to develop hardware.",
+            "I create specific arcitecture hardware for neural network algoritm so that is why I also have some an experience to develop hardware.",
           src: "/content/experience/6.jpeg",
           key: "1",
         },
