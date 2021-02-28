@@ -6,33 +6,51 @@ import Text from "../Text"
 
 const Container = styled.div`
   width: 100%;
-  height: 100px;
+  padding: 45px 0px;
   position: relative;
   margin-top: 50px;
   @media (max-width: 840px) {
-    height: 70px;
+    padding: 30px 0px;
   }
 `
 
 const ContentContainer = styled.div`
   width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
 `
 
 const LinkContainer = styled.div`
+  z-index: 998;
   display: grid;
   grid-template-columns: repeat(7, max-content);
   gap: 10px;
+  justify-items: center;
   * {
     text-decoration: none;
   }
+  @media (max-width: 450px) {
+    grid-template-columns: 1fr;
+  }
 `
+
+const TextPipeContainer = styled.div`
+  @media (max-width: 450px) {
+    display: none;
+  }
+`
+
+const data = [
+  { text: "Facebook", link: "https://www.facebook.com/tauhoo.ice", key: "0" },
+  { text: "Github", link: "https://github.com/Tauhoo", key: "1" },
+  {
+    text: "tauhoo_ice@hotmail.com",
+    link: "mailto:tauhoo_ice@hotmail.com",
+    key: "2",
+  },
+  { text: `© ${new Date().getFullYear()}`, link: "/" },
+]
 
 export default function Footer({ darkMode = false }) {
   return (
@@ -48,25 +66,22 @@ export default function Footer({ darkMode = false }) {
       ></Background>
       <ContentContainer>
         <LinkContainer>
-          <Link href="https://www.facebook.com/tauhoo.ice">
-            <a>
-              <Text darkMode={true}>facebook</Text>
-            </a>
-          </Link>
-          <Text darkMode={true}>|</Text>
-          <Link href="https://github.com/Tauhoo">
-            <a>
-              <Text darkMode={true}>github</Text>
-            </a>
-          </Link>
-          <Text darkMode={true}>|</Text>
-          <Link href="mailto:tauhoo_ice@hotmail.com">
-            <a>
-              <Text darkMode={true}>tauhoo_ice@hotmail.com</Text>
-            </a>
-          </Link>
-          <Text darkMode={true}>|</Text>
-          <Text darkMode={true}>© {new Date().getFullYear()}</Text>
+          {data.map(({ text, link, key }, index) => {
+            return (
+              <>
+                <Link href={link} key={key}>
+                  <a>
+                    <Text darkMode={true}>{text}</Text>
+                  </a>
+                </Link>
+                {index !== data.length - 1 ? (
+                  <TextPipeContainer>
+                    <Text darkMode={true}>|</Text>
+                  </TextPipeContainer>
+                ) : null}
+              </>
+            )
+          })}
         </LinkContainer>
       </ContentContainer>
     </Container>
