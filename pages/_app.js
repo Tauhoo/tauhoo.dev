@@ -4,9 +4,10 @@ import Footer from "../components/Footer"
 import Layout from "../components/Layout"
 import NavbarDummy from "../components/NavbarDummy"
 import ModeSwitch from "../components/ModeSwitch"
-import { useEffect, useState } from "react"
 import Container from "../components/Container"
 import localVariable from "../utils/localVariable"
+import GlobalStyle from "../components/GlobalStyle"
+import { useEffect, useState } from "react"
 
 function MyApp({ Component, pageProps }) {
   const [darkMode, setDarkMode] = useState(false)
@@ -24,6 +25,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      <GlobalStyle darkMode={darkMode} />
       <Navbar darkMode={darkMode}></Navbar>
       <Layout darkMode={darkMode}>
         <NavbarDummy />
