@@ -8,7 +8,7 @@ export default function Home({ darkMode = false }) {
   return (
     <div>
       <Head>
-        <title>Tauhoo</title>
+        <title>Tauhoo {darkMode ? "🌙" : "☀️"}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Banner darkMode={darkMode}></Banner>

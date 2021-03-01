@@ -28,10 +28,10 @@ function Banner({ darkMode = false, style }) {
   return (
     <Container style={style}>
       <Topic style={{ textAlign: "center" }} level={1} darkMode={darkMode}>
-        Wellcome !!
+        Wellcome !!!
       </Topic>
       <Topic style={{ textAlign: "center" }} level={2} darkMode={darkMode}>
-        Wellcome !!
+        Wellcome !!!
       </Topic>
       <br></br>
       <Text style={{ textAlign: "center" }} darkMode={darkMode}>

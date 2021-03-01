@@ -6,5 +6,5 @@ export const data = [
     link: "mailto:tauhoo_ice@hotmail.com",
     key: "2",
   },
-  { text: `© ${new Date().getFullYear()}`, link: "/", key: "3" },
+  { text: `© ${new Date().getFullYear()}`, link: "/#top", key: "3" },
 ]
