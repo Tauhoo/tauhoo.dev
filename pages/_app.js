@@ -4,21 +4,36 @@ import Footer from "../components/Footer"
 import Layout from "../components/Layout"
 import NavbarDummy from "../components/NavbarDummy"
 import ModeSwitch from "../components/ModeSwitch"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Container from "../components/Container"
+import localVariable from "../utils/localVariable"
 
 function MyApp({ Component, pageProps }) {
   const [darkMode, setDarkMode] = useState(false)
+
+  useEffect(() => {
+    const localDarkMode = localVariable.getBoolean("darkMode")
+    setDarkMode(typeof localDarkMode === "boolean" ? localDarkMode : false)
+  }, [])
+
+  const onChangeDarkMode = () => {
+    const newDarkMode = !darkMode
+    localVariable.set("darkMode", newDarkMode)
+    setDarkMode(newDarkMode)
+  }
+
   return (
     <>
       <Navbar darkMode={darkMode}></Navbar>
       <Layout darkMode={darkMode}>
         <NavbarDummy />
         <br></br>
-        <Container>
+        <Container
+          containerStyle={{ display: "flex", justifyContent: "flex-end" }}
+        >
           <ModeSwitch
             darkMode={darkMode}
-            onChange={() => setDarkMode(!darkMode)}
+            onChange={onChangeDarkMode}
           ></ModeSwitch>
         </Container>
         <Component {...pageProps} darkMode={darkMode} />

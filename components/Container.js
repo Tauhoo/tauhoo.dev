@@ -19,10 +19,10 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
 `
-export default function ContainerFunc({ children, style }) {
+export default function ContainerFunc({ children, style, containerStyle }) {
   return (
     <Wrapper style={style}>
-      <Container>{children}</Container>
+      <Container style={containerStyle}>{children}</Container>
     </Wrapper>
   )
 }

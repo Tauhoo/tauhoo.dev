@@ -6,11 +6,13 @@ const Container = styled.div`
   width: 70px;
   height: 30px;
   border-radius: 15px;
-  background-color: ${({ mode }) => (mode ? colors.black : colors.lightGray)};
+  background-color: ${({ mode }) =>
+    mode === "true" ? colors.black : colors.lightGray};
   position: relative;
   cursor: pointer;
   overflow: hidden;
   transition: 0.3s;
+  display: inline-block;
 `
 
 const Button = styled.div`
@@ -20,10 +22,10 @@ const Button = styled.div`
   border-radius: 50%;
   position: absolute;
   top: 50%;
-  left: ${({ mode }) => (mode ? "40px" : "5px")};
+  left: ${({ mode }) => (mode === "true" ? "40px" : "5px")};
   transition: 0.3s;
   transform: translateY(-50%);
-  background-color: ${({ mode }) => (mode ? "white" : "#f1c40f")};
+  background-color: ${({ mode }) => (mode === "true" ? "white" : "#f1c40f")};
 `
 
 const Shadow = styled.div`
@@ -33,17 +35,19 @@ const Shadow = styled.div`
   border-radius: 50%;
   position: absolute;
   top: 50%;
-  left: ${({ mode }) => (mode ? "-10px" : "-20px")};
+  left: ${({ mode }) => (mode === "true" ? "-10px" : "-20px")};
   transition: 0.3s;
   transform: translateY(-50%);
-  background-color: ${({ mode }) => (mode ? colors.black : colors.lightGray)};
+  background-color: ${({ mode }) =>
+    mode === "true" ? colors.black : colors.lightGray};
 `
 
 function ModeSwitch({ darkMode = false, onChange }) {
+  const darkModeString = darkMode.toString()
   return (
-    <Container mode={darkMode} onClick={onChange}>
-      <Button mode={darkMode}>
-        <Shadow mode={darkMode}></Shadow>
+    <Container mode={darkModeString} onClick={onChange}>
+      <Button mode={darkModeString}>
+        <Shadow mode={darkModeString}></Shadow>
       </Button>
     </Container>
   )
