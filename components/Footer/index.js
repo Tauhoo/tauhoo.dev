@@ -3,6 +3,7 @@ import Link from "next/link"
 import styled from "styled-components"
 import Background from "./Background"
 import Text from "../Text"
+import { data } from "../../content/contact"
 
 const Container = styled.div`
   width: 100%;
@@ -41,16 +42,26 @@ const TextPipeContainer = styled.div`
   }
 `
 
-const data = [
-  { text: "Facebook", link: "https://www.facebook.com/tauhoo.ice", key: "0" },
-  { text: "Github", link: "https://github.com/Tauhoo", key: "1" },
-  {
-    text: "tauhoo_ice@hotmail.com",
-    link: "mailto:tauhoo_ice@hotmail.com",
-    key: "2",
-  },
-  { text: `© ${new Date().getFullYear()}`, link: "/", key: "3" },
-]
+const render = source => {
+  const result = []
+  for (let index = 0; index < source.length; index++) {
+    const { text, link, key } = source[index]
+    result.push(
+      <Link href={link} key={key}>
+        <a>
+          <Text darkMode={true}>{text}</Text>
+        </a>
+      </Link>
+    )
+    if (index !== source.length - 1)
+      result.push(
+        <TextPipeContainer key={key + "_pipe"}>
+          <Text darkMode={true}>|</Text>
+        </TextPipeContainer>
+      )
+  }
+  return result
+}
 
 export default function Footer({ darkMode = false }) {
   return (
@@ -65,24 +76,7 @@ export default function Footer({ darkMode = false }) {
         }}
       ></Background>
       <ContentContainer>
-        <LinkContainer>
-          {data.map(({ text, link, key }, index) => {
-            return (
-              <>
-                <Link href={link} key={key}>
-                  <a>
-                    <Text darkMode={true}>{text}</Text>
-                  </a>
-                </Link>
-                {index !== data.length - 1 ? (
-                  <TextPipeContainer key={key + "_pipe"}>
-                    <Text darkMode={true}>|</Text>
-                  </TextPipeContainer>
-                ) : null}
-              </>
-            )
-          })}
-        </LinkContainer>
+        <LinkContainer>{render(data)}</LinkContainer>
       </ContentContainer>
     </Container>
   )

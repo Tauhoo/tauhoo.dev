@@ -99,7 +99,7 @@ export const experience = {
           detail:
             "I go to the university so I have to close the minecraft server and facebook page.",
           src: "/content/experience/2.png",
-          key: "0",
+          key: "2",
         },
       ],
     },
