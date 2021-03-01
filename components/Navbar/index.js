@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react"
 import Link from "next/link"
+import LinkButton from "../LinkButton"
 import styled from "styled-components"
 import Background from "./Background"
 import Text from "../Text"
@@ -71,7 +72,9 @@ const MenuLayoutSmall = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: 1fr;
+  grid-template-rows: 100px repeat(4, 1fr);
   width: 100%;
+  max-height: 500px;
   height: 100%;
   justify-items: center;
   align-items: center;
@@ -124,26 +127,34 @@ export default function Navbar({ darkMode = false }) {
           <div onClick={() => setVisibleMenu(old => !old)}>
             <Logo></Logo>
           </div>
-          <Link href="/#blogs">
-            <a onClick={() => setVisibleMenu(false)}>
-              <Text darkMode={true}>Blogs</Text>
-            </a>
-          </Link>
-          <Link href="/#profile">
-            <a onClick={() => setVisibleMenu(false)}>
-              <Text darkMode={true}>Profile</Text>
-            </a>
-          </Link>
-          <Link href="/#experience">
-            <a onClick={() => setVisibleMenu(false)}>
-              <Text darkMode={true}>Experience</Text>
-            </a>
-          </Link>
-          <Link href="/#contact">
-            <a onClick={() => setVisibleMenu(false)}>
-              <Text darkMode={true}>Contact</Text>
-            </a>
-          </Link>
+          <LinkButton
+            href="/#blogs"
+            onClick={() => setVisibleMenu(false)}
+            darkMode={true}
+          >
+            Blogs
+          </LinkButton>
+          <LinkButton
+            href="/#profile"
+            onClick={() => setVisibleMenu(false)}
+            darkMode={true}
+          >
+            Profile
+          </LinkButton>
+          <LinkButton
+            href="/#experience"
+            onClick={() => setVisibleMenu(false)}
+            darkMode={true}
+          >
+            Experience
+          </LinkButton>
+          <LinkButton
+            href="/#contact"
+            onClick={() => setVisibleMenu(false)}
+            darkMode={true}
+          >
+            Contact
+          </LinkButton>
         </MenuLayoutSmall>
         <Background
           darkMode={darkMode}
@@ -169,31 +180,23 @@ export default function Navbar({ darkMode = false }) {
         ></Background>
         <MenuContainer>
           <MenuLayout>
-            <Link href="/#blogs">
-              <a>
-                <Text darkMode={true}>Blogs</Text>
-              </a>
-            </Link>
-            <Link href="/#profile">
-              <a>
-                <Text darkMode={true}>Profile</Text>
-              </a>
-            </Link>
+            <LinkButton href="/#blogs" darkMode={true}>
+              Blogs
+            </LinkButton>
+            <LinkButton href="/#profile" darkMode={true}>
+              Profile
+            </LinkButton>
             <Link href="/#top">
               <a>
                 <Logo></Logo>
               </a>
             </Link>
-            <Link href="/#experience">
-              <a>
-                <Text darkMode={true}>Experience</Text>
-              </a>
-            </Link>
-            <Link href="/#contact">
-              <a>
-                <Text darkMode={true}>Contact</Text>
-              </a>
-            </Link>
+            <LinkButton href="/#experience" darkMode={true}>
+              Experience
+            </LinkButton>
+            <LinkButton href="/#contact" darkMode={true}>
+              Contact
+            </LinkButton>
           </MenuLayout>
         </MenuContainer>
       </Container>

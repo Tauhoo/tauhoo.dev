@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Background from "./Background"
 import Text from "../Text"
 import { data } from "../../content/contact"
+import LinkButton from "../LinkButton"
 
 const Container = styled.div`
   width: 100%;
@@ -47,11 +48,9 @@ const render = source => {
   for (let index = 0; index < source.length; index++) {
     const { text, link, key } = source[index]
     result.push(
-      <Link href={link} key={key}>
-        <a>
-          <Text darkMode={true}>{text}</Text>
-        </a>
-      </Link>
+      <LinkButton href={link} key={key} darkMode={true}>
+        {text}
+      </LinkButton>
     )
     if (index !== source.length - 1)
       result.push(
