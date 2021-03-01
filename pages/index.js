@@ -11,7 +11,7 @@ export default function Home({ darkMode = false }) {
         <title>Tauhoo</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Banner></Banner>
+      <Banner darkMode={darkMode}></Banner>
       <div id="blogs"></div>
       <Blogs darkMode={darkMode} />
       <div id="profile"></div>

@@ -67,6 +67,7 @@ export default function Footer({ darkMode = false }) {
   return (
     <Container>
       <Background
+        darkMode={darkMode}
         style={{
           position: "absolute",
           bottom: "0px",

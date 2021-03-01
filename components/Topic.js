@@ -11,13 +11,14 @@ import {
 
 const Container = styled.div`
   width: 100%;
-  color: ${({ darkMode }) => (darkMode ? colors : colors.lightBlack)};
+  color: ${({ darkMode }) => (darkMode ? colors.white : colors.lightBlack)};
   font-weight: ${({ bold }) => (bold ? "bold" : "lighter")};
   white-space: pre-wrap;
   word-break: break-word;
   line-height: ${({ level }) => lineHeight.topic[level]};
   font-family: ${fontFamily.topic};
   font-size: ${({ level }) => fontSize.topic[level]};
+  transition: 0.3s;
 
   @media (max-width: 840px) {
     line-height: ${({ level }) => lineHeightSmall.topic[level]};

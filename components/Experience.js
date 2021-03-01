@@ -33,7 +33,10 @@ export default function Experience({ darkMode }) {
         {experience.years.map(({ posts, year }) => {
           return (
             <div key={year}>
-              <Text style={{ textAlign: "center", margin: "50px 0px" }}>
+              <Text
+                darkMode={darkMode}
+                style={{ textAlign: "center", margin: "50px 0px" }}
+              >
                 {year}
               </Text>
               <ExperienceContainer>

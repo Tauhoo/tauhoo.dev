@@ -5,8 +5,7 @@ import Text from "./Text"
 
 const Container = styled.div`
   width: 100%;
-  height: 350px;
-  padding: 50px 20px;
+  padding: 80px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +20,7 @@ const Container = styled.div`
     div:nth-child(2) {
       display: none;
     }
-    height: 250px;
+    padding: 30px 20px;
   }
 `
 

@@ -14,6 +14,7 @@ export default function Background({ darkMode = false, style }) {
       <path
         d="M0 114H1440V23.3772C877 -7.7924 579 -7.7924 0 23.3772V114Z"
         fill={darkMode ? colors.black : colors.lightBlack}
+        style={{ transition: "0.3s" }}
       />
     </svg>
   )

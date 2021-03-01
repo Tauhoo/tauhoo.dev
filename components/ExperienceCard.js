@@ -37,7 +37,7 @@ export default function ExperienceCard({
         <Text highlight darkMode={darkMode} bold>
           {title}
         </Text>
-        <Text>{detail}</Text>
+        <Text darkMode={darkMode}>{detail}</Text>
       </ContainerContent>
     </Container>
   )

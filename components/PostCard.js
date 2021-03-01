@@ -21,7 +21,8 @@ const ContentContainer = styled.a`
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      background-color: ${colors.lightGray};
+      background-color: ${({ darkMode }) =>
+        darkMode ? colors.black : colors.lightGray};
     }
   }
 `
@@ -45,6 +46,7 @@ export default function PostCard({
 }) {
   return (
     <ContentContainer
+      darkMode={darkMode}
       onClick={() => console.log(link)}
       href={link}
       target="_blank"
