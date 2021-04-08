@@ -1,7 +1,7 @@
-import Link from "next/link"
-import Text from "./Text"
-import styled from "styled-components"
-import { useState } from "react"
+import Link from 'next/link'
+import Text from './Text'
+import styled from 'styled-components'
+import { useState } from 'react'
 
 const TextContainer = styled.a`
   text-decoration: none;
@@ -30,11 +30,27 @@ const UnderLine = styled.div`
   opacity: 0;
 `
 
-function LinkButton({ href = "/", onClick, darkMode, children }) {
+function LinkButton({
+  href = '/',
+  onClick,
+  darkMode,
+  children,
+  isNewTab = false,
+}) {
+  if (isNewTab) {
+    return (
+      <TextContainer onClick={onClick} target='_blank' href={href}>
+        <Text style={{ marginBottom: '3px' }} darkMode={darkMode}>
+          {children}
+        </Text>
+        <UnderLine></UnderLine>
+      </TextContainer>
+    )
+  }
   return (
     <Link href={href}>
       <TextContainer onClick={onClick}>
-        <Text style={{ marginBottom: "3px" }} darkMode={darkMode}>
+        <Text style={{ marginBottom: '3px' }} darkMode={darkMode}>
           {children}
         </Text>
         <UnderLine></UnderLine>

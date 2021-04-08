@@ -1,9 +1,9 @@
-import React from "react"
-import styled from "styled-components"
-import Background from "./Background"
-import Text from "../Text"
-import { data } from "../../content/contact"
-import LinkButton from "../LinkButton"
+import React from 'react'
+import styled from 'styled-components'
+import Background from './Background'
+import Text from '../Text'
+import { data } from '../../content/contact'
+import LinkButton from '../LinkButton'
 
 const Container = styled.div`
   width: 100%;
@@ -47,13 +47,13 @@ const render = source => {
   for (let index = 0; index < source.length; index++) {
     const { text, link, key } = source[index]
     result.push(
-      <LinkButton href={link} key={key} darkMode={true}>
+      <LinkButton href={link} key={key} darkMode={true} isNewTab>
         {text}
       </LinkButton>
     )
     if (index !== source.length - 1)
       result.push(
-        <TextPipeContainer key={key + "_pipe"}>
+        <TextPipeContainer key={key + '_pipe'}>
           <Text darkMode={true}>|</Text>
         </TextPipeContainer>
       )
@@ -67,11 +67,11 @@ export default function Footer({ darkMode = false }) {
       <Background
         darkMode={darkMode}
         style={{
-          position: "absolute",
-          bottom: "0px",
-          left: "0px",
-          height: "100%",
-          width: "100%",
+          position: 'absolute',
+          bottom: '0px',
+          left: '0px',
+          height: '100%',
+          width: '100%',
         }}
       ></Background>
       <ContentContainer>
